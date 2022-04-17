@@ -21,7 +21,7 @@
             <!-- 指定方言 -->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
             <!-- 是否显示SQL语句 -->
-            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.show_sql" value="false" />
             <!-- 是否格式化SQL语句 -->
             <property name="hibernate.format_sql" value="true" />
             <!-- 生成DDL的策略 create/create-drop/udpate/validate-->

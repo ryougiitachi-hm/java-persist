@@ -10,6 +10,7 @@
     <modules>
         <module>persist-hibernate-jpa</module>
         <module>persist-spring-jpa</module>
+        <module>persist-sql</module>
     </modules>
 
     <properties>

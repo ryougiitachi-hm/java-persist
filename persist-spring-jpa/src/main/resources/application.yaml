@@ -1,0 +1,20 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: persist-spring-jpa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:33001/scenario
+    username: root
+    password: 123456
+    hikari:
+      pool-name: hikari-mysql
+      auto-commit: false
+      connection-timeout: 5000
+      minimum-idle: 5
+  jpa:
+    hibernate:
+      ddl-auto: validate #自动更新
+    show-sql: false  #日志中显示sql语句

@@ -6,6 +6,6 @@ import per.itachi.java.persist.spring.jpa.domain.rdbms.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    @EntityGraph(value = "Order.user", type = EntityGraph.EntityGraphType.FETCH)
-    Order getOrderByOrderNbr(String orderNbr);
+    @EntityGraph(value = "order.user", type = EntityGraph.EntityGraphType.FETCH)
+    Order getOrderByOrderNbr(String orderNbr);// left join
 }

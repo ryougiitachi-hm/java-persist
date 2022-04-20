@@ -9,11 +9,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
+import javax.persistence.NamedEntityGraphs;
 import javax.persistence.Table;
 import lombok.Getter;
 
 @Entity
 @Table(name = "T_ORDER")
+@NamedEntityGraphs({
+        @NamedEntityGraph(name = "order.user", attributeNodes = {@NamedAttributeNode("user")})
+})
 @Getter
 public class Order {
 
@@ -38,7 +44,7 @@ public class Order {
 //    @Column(name = "USER_ID", insertable = false)
 //    private Long userId;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
     private User user;
 

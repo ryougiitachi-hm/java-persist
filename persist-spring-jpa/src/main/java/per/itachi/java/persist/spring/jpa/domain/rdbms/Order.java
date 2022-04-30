@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
 import javax.persistence.NamedEntityGraphs;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import lombok.Getter;
 
@@ -44,7 +45,7 @@ public class Order {
 //    @Column(name = "USER_ID", insertable = false)
 //    private Long userId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
     private User user;
 

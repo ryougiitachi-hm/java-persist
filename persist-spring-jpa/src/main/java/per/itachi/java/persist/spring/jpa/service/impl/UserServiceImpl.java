@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     * In mysql, this row can be saved without Transactional...
+     * In mysql, this row can be saved without Transactional, wired...
      * */
     @Transactional(isolation = Isolation.READ_COMMITTED)
     @Override

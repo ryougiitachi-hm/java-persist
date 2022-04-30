@@ -1,5 +1,6 @@
 package per.itachi.java.persist.spring.jpa.adaptee.controller;
 
+import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,7 @@ public class UserController {
 
     @PostMapping("/users")
     public void createUser(@RequestBody UserVO userVO) {
+        userVO.setUsername(UUID.randomUUID().toString().replace("-", ""));
         userService.createUser(userVO);
     }
 }
